@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     reactStrictMode: true,
 
     basePath: process.env.PAGES_BASE_PATH,
+    assetPrefix: process.env.PAGES_BASE_PATH,
     images: { unoptimized: true },
 };
 
