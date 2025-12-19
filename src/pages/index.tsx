@@ -14,65 +14,56 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black`}
-    >
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            演示主页-123-456
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            通过下面的链接导航到两个演示页面。
-          </p>
-          <div className="flex gap-4">
-            <Link
-              href="/page-one"
-              className="flex h-10 items-center justify-center rounded-full border border-solid border-black/[.08] px-4 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            >
-              前往页面一
-            </Link>
-            <Link
-              href="/page-two"
-              className="flex h-10 items-center justify-center rounded-full border border-solid border-black/[.08] px-4 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            >
-              前往页面二
-            </Link>
-          </div>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <main className="w-full max-w-3xl px-6 py-24 sm:px-10">
+        <h1 className="text-3xl font-semibold tracking-tight text-black dark:text-zinc-50">
+          简单演示主页-123-567-8888
+        </h1>
+        <p className="mt-3 text-zinc-600 dark:text-zinc-400">
+          这是一个最小示例：一个主页，两个其他页面。点击下面链接跳转。
+        </p>
+
+        <nav className="mt-10 grid gap-4 sm:grid-cols-2">
+          {/* <Link
+            href="/blog"
+            className="rounded-xl border border-black/[.08] bg-white px-5 py-4 transition-colors hover:bg-black/[.04] dark:border-white/[.145] dark:bg-black dark:hover:bg-[#1a1a1a]"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs/pages/getting-started?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <div className="text-lg font-medium">博客</div>
+            <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+              /blog
+            </div>
+          </Link> */}
+
+          <Link
+            href="/counter"
+            className="rounded-xl border border-black/[.08] bg-white px-5 py-4 transition-colors hover:bg-black/[.04] dark:border-white/[.145] dark:bg-black dark:hover:bg-[#1a1a1a]"
           >
-            Documentation
-          </a>
-        </div>
+            <div className="text-lg font-medium">交互计数器</div>
+            <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+              /counter
+            </div>
+          </Link>
+
+          <Link
+            href="/demo-one"
+            className="rounded-xl border border-black/[.08] bg-white px-5 py-4 transition-colors hover:bg-black/[.04] dark:border-white/[.145] dark:bg-black dark:hover:bg-[#1a1a1a]"
+          >
+            <div className="text-lg font-medium">页面一</div>
+            <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+              /demo-one
+            </div>
+          </Link>
+
+          <Link
+            href="/demo-two"
+            className="rounded-xl border border-black/[.08] bg-white px-5 py-4 transition-colors hover:bg-black/[.04] dark:border-white/[.145] dark:bg-black dark:hover:bg-[#1a1a1a]"
+          >
+            <div className="text-lg font-medium">页面二</div>
+            <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+              /demo-two
+            </div>
+          </Link>
+        </nav>
       </main>
     </div>
   );
